@@ -40,10 +40,8 @@
             </div>
         </nav>
     </header>
-    <footer id="footer-section">
-        <div class="footer-copyright text-center">
-            <span>&copy; 2019 Connex, Inc.</span>
-        </div>
+    <footer class="footer">
+        <span>&copy; 2019 Connex, Inc.</span>
     </footer>
     <script src="/lib/jquery/dist/jquery.js"></script>
     <script src="/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
