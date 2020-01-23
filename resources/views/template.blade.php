@@ -40,6 +40,7 @@
             </div>
         </nav>
     </header>
+    @yield('content')
     <footer class="footer">
         <span>&copy; 2019 Connex, Inc.</span>
     </footer>
