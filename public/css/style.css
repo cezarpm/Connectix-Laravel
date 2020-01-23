@@ -1,0 +1,106 @@
+html,
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.main-vh {
+	height: 80vh;
+}
+
+/* HEADER */
+.navbar {
+	box-shadow: 0 2px 8px rgba(139, 112, 112, 0.26);
+}
+
+.btn-nav {
+	background-color: #ec5252;
+	border-radius: 6px;
+	margin-right: 5px;
+	color: white;
+}
+
+.btn-nav:hover {
+	border: 1px solid #ec5252;
+	background-color: #ffffff;
+}
+/* JUMBOTRON SECTION */
+.jumbotron {
+	margin-bottom: 0px;
+	color: #ffffff;
+}
+
+.jumbotron-with-bg {
+	background-image: url("../img/bd-image.png");
+	background-position: center;
+	background-size: cover;
+}
+
+.jumbotrom-text {
+	text-shadow: 1px 1px 1px black;
+}
+
+.btn-jumbotron {
+	background-color: #ec5252;
+	border-radius: 6px;
+	margin-right: 5px;
+	color: white;
+}
+
+.btn-jumbotron:hover {
+	color: #000000;
+	background-color: #ffffff;
+	border: 1px solid #ec5252;
+}
+
+/* SOBRE SECTION */
+
+#sobre-banner {
+	background: linear-gradient(-100deg, #ec5252 0%, #6e1a52 100%);
+}
+
+.sobre-container {
+	color: #ffffff;
+	display: flex;
+	padding: 20px;
+}
+
+.icons i {
+	margin-right: 5px;
+}
+
+.cards-carrossel {
+	margin-right: 10px;
+}
+
+.carousel-control-prev-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.section-somos__imgs {
+	width: 300px;
+	height: 300px;
+}
+
+#footer-section {
+	color: #ffffff;
+	background-color: #363d4a;
+	font-size: 0.9em;
+}
+
+#footer-section ul {
+	list-style-type: none;
+}
+
+.footer-icons a {
+	color: #ffffff !important;
+	margin-top: 8px;
+	margin-right: 8px;
+}
+
+.footer-copyright {
+	padding-top: 20px;
+}
