@@ -1,4 +1,5 @@
 @extends('template')
+@section('title', 'Connectix -- Home')
 @section('content')
 <section id="jumbotron-section">
     <div class="jumbotron jumbotron-fluid jumbotron-with-bg">
@@ -14,7 +15,7 @@
                 </p>
             </div>
 
-            <a class="btn btn-jumbotron" href="#">Registre-se</a>
+            <a class="btn btn-jumbotron" href="{{ url('/register') }}">Registre-se</a>
         </div>
     </div>
 </section>
