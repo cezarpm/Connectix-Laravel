@@ -15,23 +15,35 @@ class CreateConsultingsTable extends Migration
     {
         Schema::create('consultings', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id');
             $table->string('name');
-            $table->bigInteger('categoria');
+            $table->text('description');
+            $table->unsignedBigInteger('categoria');
+            $table->bigInteger('price');
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
         });
 
         Schema::create('categories', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->bigInteger('categoria');
+            $table->string('categorie');
             $table->timestamps();
         });
 
         Schema::create('categorie_consulting', function (Blueprint $table) {
+
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->bigInteger('categoria');
+            $table->unsignedBigInteger('consulting_id');
+            $table->unsignedBigInteger('category_id');
             $table->timestamps();
+
+            $table->unique(['consulting_id', 'category_id']);
+            $table->foreign('consulting_id')->references('id')->on('consultings');
+            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 
