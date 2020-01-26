@@ -3,46 +3,37 @@
 
 @section('content')
 
-    <section class="table">
-        <div class="container">
-            <h1>Index</h1>
-            <p>
-                <a href="#">Create New</a>
-            </p>
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Descrição</th>
-                    <th>Preço</th>
-                    <th>Categoria</th>
-                    <th></th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach($consultings as $consulting)
-                    <tr>
-                        <td>
-                            {{$consulting->name}}
-                        </td>
-                        <td>
-                            {{$consulting->description}}
-                        </td>
-                        <td>
-                            {{$consulting->price}}
-                        </td>
-                        <td>
-                            {{$consulting->categoria}}
-                        </td>
-                        <td>
-                            <a href="#">Edit</a>
-                            <a href="#">Details</a>
-                            <a href="#">Delete</a>
-                        </td>
-                    </tr>
-                @endforeach
-                </tbody>
-            </table>
+    <div class="container">
+        <h4>Consulting</h4>
+        <hr/>
+        <dl class="row">
+            <dt class="col-sm-2">
+                Nome
+            </dt>
+            <dd class="col-sm-10">
+                {{$consulting->name}}
+            </dd>
+            <dt class="col-sm-2">
+                Descrição
+            </dt>
+            <dd class="col-sm-10">
+                {{$consulting->description}}
+            </dd>
+            <dt class="col-sm-2">
+                Preço
+            </dt>
+            <dd class="col-sm-10">
+                {{$consulting->price}}
+            </dd>
+            <dt class="col-sm-2">
+                Categoria
+            </dt>
+            <dd class="col-sm-10">
+                {{$consulting->categoria}}
+            </dd>
+        </dl>
+        <div>
+            <a>Back to List</a>
         </div>
-    </section>
+    </div>
 @endsection
