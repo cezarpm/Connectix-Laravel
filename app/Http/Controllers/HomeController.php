@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Consulting;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -19,6 +20,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $consultings = Consulting::all()->take(3);
+        return view('index', ['consultings' => $consultings]);
     }
 }

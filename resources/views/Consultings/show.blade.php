@@ -20,25 +20,27 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>
-                        Nome
-                    </td>
-                    <td>
-                        Descrição
-                    </td>
-                    <td>
-                        Preço
-                    </td>
-                    <td>
-                        Categoria
-                    </td>
-                    <td>
-                        <a href="#">Edit</a>
-                        <a href="#">Details</a>
-                        <a href="#">Delete</a>
-                    </td>
-                </tr>
+                @foreach($consultings as $consulting)
+                    <tr>
+                        <td>
+                            {{$consulting->name}}
+                        </td>
+                        <td>
+                            {{$consulting->description}}
+                        </td>
+                        <td>
+                            {{$consulting->price}}
+                        </td>
+                        <td>
+                            {{$consulting->categoria}}
+                        </td>
+                        <td>
+                            <a href="#">Edit</a>
+                            <a href="#">Details</a>
+                            <a href="#">Delete</a>
+                        </td>
+                    </tr>
+                @endforeach
                 </tbody>
             </table>
         </div>

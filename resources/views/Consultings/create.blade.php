@@ -7,30 +7,38 @@
         <hr/>
         <div class="row">
             <div class="col-md-4">
-                <form>
-                    <div class="text-danger"></div>
+                <form method="POST" action="/consultings">
+                    @csrf
                     <div class="form-group">
-                        <label class="control-label">Name</label>
-                        <input class="form-control"/>
-                        <span class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Categoria</label>
-                        <select class="form-control"></select>
-                        <span class="text-danger"></span>
+                        <label class="control-label">Nome</label>
+                        <input
+                            name="name"
+                            type="text"
+                            id="name"
+                            value="{{old('name')}}"
+                            class="form-control @error('name') is-danger @enderror"/>
                     </div>
                     <div class="form-group">
                         <label class="control-label">Preço</label>
-                        <input class="form-control"/>
-                        <span class="text-danger"></span>
+                        <input
+                            name="price"
+                            type="number"
+                            id="price"
+                            value="{{old('price')}}"
+                            class="form-control @error('price') is-danger @enderror"/>
                     </div>
                     <div class="form-group">
                         <label class="control-label">Descrição</label>
-                        <input class="form-control"/>
-                        <span  class="text-danger"></span>
+                        <input
+                            name="description"
+                            type="text"
+                            id="description"
+                            value="{{old('description')}}"
+                            class="form-control @error('description') is-danger @enderror"/>
                     </div>
+
                     <div class="form-group">
-                        <input type="submit" value="Create" class="btn btn-primary"/>
+                        <input type="submit" value="Criar" class="btn btn-primary"/>
                     </div>
                 </form>
             </div>

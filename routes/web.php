@@ -18,3 +18,6 @@ Route::get('/', 'HomeController@index');
 Route::get('/consultings','ConsultingController@show');
 
 Route::get('/create','ConsultingController@create');
+
+Route::post('/consultings','ConsultingController@store');
+
