@@ -33,7 +33,7 @@ class ConsultingController extends Controller
 
         $consulting = new Consulting($validated);
         $consulting->user_id = 1;
-        $consulting->categoria = 1;
+        $consulting->category_id = 1;
         $consulting->save();
 
         return redirect('/consultings');

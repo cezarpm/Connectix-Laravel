@@ -29,11 +29,11 @@
                 Categoria
             </dt>
             <dd class="col-sm-10">
-                {{$consulting->categoria}}
+                {{$consulting->category->name}}
             </dd>
         </dl>
         <div>
-            <a>Back to List</a>
+            <a href="{{route('consultings.index')}}">Back to List</a>
         </div>
     </div>
 @endsection
