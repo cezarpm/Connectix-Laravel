@@ -12,7 +12,7 @@ class CategoriesSeeder extends Seeder
     public function run()
     {
         DB::table('categories')->insert([
-            'category' => Str::random(4),
+            'name' => Str::random(4),
         ]);
     }
 }

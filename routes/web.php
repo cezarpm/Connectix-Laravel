@@ -16,8 +16,3 @@ Auth::routes();
 Route::get('/', 'HomeController@index');
 
 Route::resource('consultings', 'ConsultingController');
-
-
-
-
-

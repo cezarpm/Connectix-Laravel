@@ -44,7 +44,7 @@
         </div>
 
         <div>
-            <a href="#">Back to List</a>
+            <a href="{{route('consultings.index')}}">Back to List</a>
         </div>
     </section>
 

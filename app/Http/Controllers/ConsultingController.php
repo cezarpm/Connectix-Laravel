@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Consulting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ConsultingController extends Controller
 {
@@ -37,7 +38,7 @@ class ConsultingController extends Controller
         ]);
 
         $consulting = new Consulting($validated);
-        $consulting->Auth::id();
+        $consulting->user_id = Auth::id();
         $consulting->category_id = 1;
         $consulting->save();
 
@@ -49,7 +50,7 @@ class ConsultingController extends Controller
         return view('Consultings.edit', ['consulting' => $consulting]);
     }
 
-    public function delete(Consulting $consulting)
+    public function destroy(Consulting $consulting)
     {
         $consulting->delete();
 

@@ -32,12 +32,19 @@
                             {{$consulting->price}}
                         </td>
                         <td>
-                            {{$consulting->categoria}}
+                            {{$consulting->category->name}}
                         </td>
                         <td>
-                            <a href="/consultings/{{$consulting->id}}/edit">Edit</a>
-                            <a href="/consultings/{{$consulting->id}}">Details</a>
-                            <a href="/consultings/{{$consulting->id}}/delete">Delete</a>
+                            <a href="consultings/{{$consulting->id}}/edit">Edit</a>
+                            <a href="consultings/{{$consulting->id}}">Details</a>
+                            <a href="consultings/{{$consulting->id}}"
+                               onclick="event.preventDefault();
+                                document.getElementById('delete-form').submit();">Delete
+                            </a>
+                            <form id="delete-form" action="{{ route('consultings.destroy', $consulting) }}" method="POST">
+                                @method('DELETE')
+                                @csrf
+                            </form>
                         </td>
                     </tr>
                 @endforeach
