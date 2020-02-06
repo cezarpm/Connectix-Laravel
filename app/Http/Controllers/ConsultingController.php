@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ConsultingController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $consultings = Consulting::all();
@@ -32,12 +37,11 @@ class ConsultingController extends Controller
         ]);
 
         $consulting = new Consulting($validated);
-        $consulting->user_id = 1;
+        $consulting->Auth::id();
         $consulting->category_id = 1;
         $consulting->save();
 
-        return redirect('/consultings');
-
+        return redirect()->route('consultings.index');
     }
 
     public function edit(Consulting $consulting)
@@ -49,7 +53,7 @@ class ConsultingController extends Controller
     {
         $consulting->delete();
 
-        return redirect('/consultings');
+        return redirect()->route('consultings.index');
     }
 
     public function update(Consulting $consulting)
@@ -60,9 +64,9 @@ class ConsultingController extends Controller
             'description' => 'required',
         ]);
 
-        $consulting ->update($validated);
+        $consulting->update($validated);
 
-        return redirect('/consultings');
+        return redirect()->route('consultings.update');
 
     }
 }
