@@ -1,5 +1,5 @@
 @section('title', 'Connectix -- Consultorias')
-@extends('template')
+@extends('layouts.template')
 
 @section('content')
 

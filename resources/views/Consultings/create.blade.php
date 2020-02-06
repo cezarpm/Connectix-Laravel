@@ -1,10 +1,9 @@
-@extends('template')
+@extends('layouts.template')
 @section('title', 'Connectix -- Consultorias')
 @section('content')
     <section class="container">
         <h1>Create</h1>
         <h4>Consulting</h4>
-        <hr/>
         <div class="row">
             <div class="col-md-4">
                 <form method="POST" action="/consultings">
