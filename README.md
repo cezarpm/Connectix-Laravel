@@ -1,3 +1,15 @@
+## Como Executar o Projeto
+<ul>
+    <li>Clonar o projeto</li>
+    <li>Rodar o comando composer install</li>
+    <li>Criar um .env </li>
+    <li>Criar uma database Mysql com o nome Connectix </li>
+    <li>Rodar php migrate</li>
+    <li>Rodar php artisan db:seed --class=CategoriesSeeder</li>
+    <li>E executa-lo com php artisan serve</li>
+</ul>
+
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
