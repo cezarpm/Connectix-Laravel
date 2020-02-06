@@ -4,8 +4,9 @@
     <li>Rodar o comando composer install</li>
     <li>Criar um .env </li>
     <li>Criar uma database Mysql com o nome Connectix </li>
-    <li>Rodar php migrate</li>
+    <li>Rodar php artisan migrate</li>
     <li>Rodar php artisan db:seed --class=CategoriesSeeder</li>
+    <li>Rodar php artisan key:generate</li>
     <li>E executa-lo com php artisan serve</li>
 </ul>
 
